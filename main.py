@@ -55,9 +55,16 @@ resources = {
     "money": 0,
 }
 
+turn_off_machine = False
 
 # TODO 1. Prompt user by asking "What would you like? (expresso/latte/cappuccino)
+user_input = input("What would you like? (expresso/latte/cappuccino)?")
+
 # TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
+if user_input == "off":
+    turn_machine_off = True
+
+
 # TODO 3. Print report: when user enters "report" to the prompt. Shows current resources
 def print_report():
     print(f"Water: {resources['water']}ml")
