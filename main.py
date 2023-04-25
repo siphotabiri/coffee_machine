@@ -58,6 +58,7 @@ turn_machine_off = False
 while not turn_machine_off:
     # TODO 1. Prompt user by asking "What would you like? (expresso/latte/cappuccino)
     user_input = input("What would you like? (expresso/latte/cappuccino)?")
+    cost = MENU[user_input]["cost"]
 
     # TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
     if user_input == "off":
@@ -69,5 +70,7 @@ while not turn_machine_off:
     #  the program should check if there enough resources.
 
 # TODO 5. Process Coins. If there are sufficient resources, prompt user to insert coins.
+    insert_coins = input("Please insert coins.")
 # TODO 6: Check transactions successful: check if user has inserted enough money.
+
 # TODO 7: Make Cofffee: ingredients to make drink should be deducted from coffee machine resources.
