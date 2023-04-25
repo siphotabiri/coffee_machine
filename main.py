@@ -1,26 +1,3 @@
-# Makes 3 Hot Flavours: Expresso, Latte, Cappuccino
-# Expresso: £1.50, 50ml Water, 18g Coffee
-# Latte: £2.50, 200ml Water, 24g Coffe, 150ml Milk
-# Cappuccino: £3.00, 250ml Water, 24g Coffee, 100ml Milk
-#
-# Starting resources in the coffee machine:
-# 300ml Water
-# 200ml Milk
-# 100g of Coffee
-#
-# Coin Operated Machine
-# Penny = 0.01
-# Nickel = 0.05
-# Dime = 0.10
-# Quarter = 0.25
-#
-# Program Requirements:
-#
-# Print Report: machine should be able to tell us what resources it has left
-# Check resources sufficient: look through resources, check it against the recipe and report findings
-# Process coins: calculate how much money coins inserted are worth and change
-# Check transaction successful:
-# Make the coffee: deduct the resources used to make the coffee.
 MENU = {
     "expresso": {
         "ingredients": {
@@ -55,15 +32,6 @@ resources = {
     "money": 0,
 }
 
-turn_off_machine = False
-
-# TODO 1. Prompt user by asking "What would you like? (expresso/latte/cappuccino)
-user_input = input("What would you like? (expresso/latte/cappuccino)?")
-
-# TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
-if user_input == "off":
-    turn_machine_off = True
-
 
 # TODO 3. Print report: when user enters "report" to the prompt. Shows current resources
 def print_report():
@@ -71,6 +39,19 @@ def print_report():
     print(f"Milk: {resources['milk']}ml")
     print(f"Coffee: {resources['coffee']}g")
     print(f"Money: £{resources['money']}")
+
+
+turn_machine_off = False
+
+while not turn_machine_off:
+    # TODO 1. Prompt user by asking "What would you like? (expresso/latte/cappuccino)
+    user_input = input("What would you like? (expresso/latte/cappuccino)?")
+
+    # TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
+    if user_input == "off":
+        turn_machine_off = True
+    if user_input == "report":
+        print_report()
 
 # TODO 4. Check resources sufficient. When user picks a drink, the program should check if there enough resources.
 # TODO 5. Process Coins. If there are sufficient resources, prompt user to insert coins.
