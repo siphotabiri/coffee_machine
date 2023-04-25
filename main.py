@@ -41,6 +41,18 @@ def print_report():
     print(f"Money: £{resources['money']}")
 
 
+def check_resources(drink):
+    if resources["water"] >= MENU[drink]["ingredients"]["water"]:
+        pass
+        if resources["milk"] >= MENU[drink]["ingredients"]["milk"]:
+            pass
+            if resources["coffee"] >= MENU[drink]["ingredients"]["coffee"]:
+                return True
+    else:
+        print("Sorry, there are not enough resources.")
+        return False
+
+
 turn_machine_off = False
 
 while not turn_machine_off:
@@ -53,7 +65,9 @@ while not turn_machine_off:
     if user_input == "report":
         print_report()
 
-# TODO 4. Check resources sufficient. When user picks a drink, the program should check if there enough resources.
+    # TODO 4. Check resources sufficient. When user picks a drink,
+    #  the program should check if there enough resources.
+
 # TODO 5. Process Coins. If there are sufficient resources, prompt user to insert coins.
 # TODO 6: Check transactions successful: check if user has inserted enough money.
 # TODO 7: Make Cofffee: ingredients to make drink should be deducted from coffee machine resources.
