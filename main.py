@@ -52,11 +52,19 @@ resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
+    "money": 0,
 }
+
 
 # TODO 1. Prompt user by asking "What would you like? (expresso/latte/cappuccino)
 # TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
 # TODO 3. Print report: when user enters "report" to the prompt. Shows current resources
+def print_report():
+    print(f"Water: {resources['water']}ml")
+    print(f"Milk: {resources['milk']}ml")
+    print(f"Coffee: {resources['coffee']}g")
+    print(f"Money: £{resources['money']}")
+
 # TODO 4. Check resources sufficient. When user picks a drink, the program should check if there enough resources.
 # TODO 5. Process Coins. If there are sufficient resources, prompt user to insert coins.
 # TODO 6: Check transactions successful: check if user has inserted enough money.
