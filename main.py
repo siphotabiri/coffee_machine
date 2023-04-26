@@ -85,6 +85,7 @@ while not turn_machine_off:
     # TODO 2. Turn off the Coffee Machine by entering "off" to the prompt.
     if user_input == "off":
         turn_machine_off = True
+        break
     if user_input == "report":
         print_report()
 
