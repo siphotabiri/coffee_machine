@@ -17,18 +17,18 @@ MENU = {
     },
     "cappuccino": {
         "ingredients": {
-            "water": 250,
-            "milk": 100,
-            "coffee": 24,
+            "water": 250.00,
+            "milk": 100.00,
+            "coffee": 24.00,
         },
         "cost": 3.00,
     },
 }
 
 resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
+    "water": 300.00,
+    "milk": 200.00,
+    "coffee": 100.00,
     "money": 0.00,
 }
 
@@ -58,10 +58,10 @@ while not turn_machine_off:
 
     def process_coins():
         print("Please insert coins.")
-        pennies = int(input("How many pennies?")) * 0.01
-        nickles = int(input("How many nickles?")) * 0.05
-        dimes = int(input("How many dimes?")) * 0.10
-        quarters = int(input("How many quarters?")) * 0.25
+        pennies = float(input("How many pennies?")) * 0.01
+        nickles = float(input("How many nickles?")) * 0.05
+        dimes = float(input("How many dimes?")) * 0.10
+        quarters = float(input("How many quarters?")) * 0.25
         resources["money"] = pennies + nickles + dimes + quarters
 
 
