@@ -29,7 +29,7 @@ resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
-    "money": 0,
+    "money": 0.00,
 }
 
 
@@ -58,15 +58,10 @@ def process_coins():
     nickles = int(input("How many nickles?")) * 0.05
     dimes = int(input("How many dimes?")) * 0.10
     quarters = int(input("How many quarters?")) * 0.25
-    monetary_value = float(pennies + nickles + dimes + quarters)
-    return monetary_value
+    resources["money"] = pennies + nickles + dimes + quarters
 
 
-def is_transaction_successful():
-
-
-def make_coffee():
-
+def is_transaction_successful(drink):
 
 
 turn_machine_off = False
@@ -86,7 +81,8 @@ while not turn_machine_off:
     #  the program should check if there enough resources.
     resources_check = check_resources(user_input)
     # TODO 5. Process Coins. If there are sufficient resources, prompt user to insert coins.
-    insert_coins = input("Please insert coins.")
+    if resources_check:
+        process_coins()
     # TODO 6: Check transactions successful: check if user has inserted enough money.
 
     # TODO 7: Make Cofffee: ingredients to make drink should be deducted from coffee machine resources.
